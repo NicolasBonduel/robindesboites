@@ -2,7 +2,6 @@ chrome.webRequest.onBeforeRequest.addListener(
   function (info) {
     let url = new URL(info.url);
     url.searchParams.set('tag', 'alchabal-21');
-    console.log(url);
     return { redirectUrl: url.href };
   },
   {
